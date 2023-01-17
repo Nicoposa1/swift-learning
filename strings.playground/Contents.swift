@@ -1,3 +1,14 @@
 import UIKit
 
-var greeting = "Hello, playground"
+let someString = "This is a strings"
+
+let stringMultiLine = """
+    Esto es una\
+    prubea de multilineas
+"""
+
+let wiseWords = "\" La imaginación es mas importante que el saber \" - Albert Einstein"
+
+let dolarSymbol = "\u{24}"
+let blackHeath = "\u{2665}"
+let heath = "\u{1F496}"
