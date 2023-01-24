@@ -12,3 +12,6 @@ let wiseWords = "\" La imaginación es mas importante que el saber \" - Albert E
 let dolarSymbol = "\u{24}"
 let blackHeath = "\u{2665}"
 let heath = "\u{1F496}"
+
+var string = ""
+var anotherString = String()
