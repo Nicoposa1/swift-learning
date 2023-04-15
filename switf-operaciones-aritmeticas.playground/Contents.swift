@@ -1,4 +1,4 @@
-import UIKit
+// import UIKit
 
 let b = 5
 var a = 5
@@ -99,3 +99,22 @@ let haveAName = false
 if youAreLegal || haveAName {
     print("pasas al baile")
 }
+
+let greeting = "Hola que tal"
+greeting[greeting.startIndex]
+//greating[greeting.endIndex]
+greeting[greeting.index(before: greeting.endIndex)]
+
+for idx in greeting.indices{
+    print("\(greeting[idx ])", terminator: "")
+}
+
+var welcom = "Hola"
+welcom.insert("!", at: welcom.endIndex)
+welcom.insert(contentsOf: " que tal", at: welcom.index(before: welcom.endIndex))
+
+// remove "!" to welcome
+welcom.remove(at: welcom.index(before: welcom.endIndex))
+print(welcom)
+welcom.removeSubrange(welcom.index(welcom.endIndex, offsetBy: -6)..<welcom.endIndex)
+print(welcom)
