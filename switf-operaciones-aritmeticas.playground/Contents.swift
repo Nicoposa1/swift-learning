@@ -73,7 +73,7 @@ for namess in names[...1 ] {
     print(namess)
 }
 
-let range = ...5 // from -infinity to 5 
+let range = ...5 // from -infinity to 5
 range.contains(7)
 range.contains(3)
 range.contains(-5)
@@ -116,5 +116,13 @@ welcom.insert(contentsOf: " que tal", at: welcom.index(before: welcom.endIndex))
 // remove "!" to welcome
 welcom.remove(at: welcom.index(before: welcom.endIndex))
 print(welcom)
-welcom.removeSubrange(welcom.index(welcom.endIndex, offsetBy: -6)..<welcom.endIndex)
+// welcom.removeSubrange(welcom.index(welcom.endIndex, offsetBy: -6)..<welcom.endIndex)
 print(welcom)
+
+let index = greeting.firstIndex(of: ",") ?? greeting.endIndex
+print(welcom)
+let firstPart = greeting[..<index]
+print(welcom)
+
+let newGreeting = "Hola Soy Nicolas"
+newGreeting.hasPrefix("Hola")
