@@ -124,5 +124,35 @@ print(welcom)
 let firstPart = greeting[..<index]
 print(welcom)
 
-let newGreeting = "Hola Soy Nicolas"
-newGreeting.hasPrefix("Hola")
+let collection = [
+    "Acto 1 scene1", "Acto 1 scene2", "Acto 1 scene3", "Acto 1 scene4",
+    "Acto 2 scene1", "Acto 2 scene2", "Acto 2 scene3",
+    "Acto 3 scene1", "Acto 3 scene2",
+]
+
+var act1SceneCount = 0
+for scene in collection {
+    if scene.hasPrefix("Acto 1"){
+        act1SceneCount += 1
+    }
+}
+
+print("El número de esenas en al acto 1 es de: \(act1SceneCount  )")
+
+let ghost = "Fantasma! 👻"
+
+for codeUnit in ghost .utf8{
+    print(codeUnit, terminator: " ")
+}
+
+print(" ")
+
+for codeUnit in ghost.utf16{
+    print(codeUnit, terminator: " ")
+}
+print(" ")
+
+for codeUnit in ghost.unicodeScalars{
+    print(codeUnit, terminator: "  ")
+}
+
