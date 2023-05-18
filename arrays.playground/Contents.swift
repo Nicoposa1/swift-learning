@@ -50,3 +50,23 @@ for item in shoppingList{
 for (idx, item) in shoppingList.enumerated(){
     print("Item \(idx + 1): \(item) ")
 }
+// SET CONJUNTO
+
+var letters = Set<Character>()
+letters.count
+letters.insert("A")
+letters.insert("H")
+letters.insert("B")
+letters
+
+var favoriteGames : Set<String > = ["COD", "Fifa", "Brawl"]
+favoriteGames.count
+favoriteGames.insert("CS")
+favoriteGames
+if let removedGame = favoriteGames.remove("COD"){
+    print("Elimene el \(removedGame)")
+}
+favoriteGames
+for vg in favoriteGames {
+    print("\(vg)")
+}
