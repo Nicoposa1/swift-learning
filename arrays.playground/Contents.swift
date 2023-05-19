@@ -70,3 +70,39 @@ favoriteGames
 for vg in favoriteGames {
     print("\(vg)")
 }
+favoriteGames.insert("Fifa")
+favoriteGames
+
+let oddDigits : Set = [1,3,5,7,9]
+let evenDigits : Set = [0,2,4,6,8]
+let primeNumbers: Set = [2,3,5,7]
+
+//union de oddDigits con evenDigits
+oddDigits.union(evenDigits).sorted()
+//Intersección que son de A y de B
+oddDigits.intersection(evenDigits)
+oddDigits.intersection(primeNumbers).sorted()
+evenDigits.intersection(primeNumbers).sorted()
+
+//A - B, son de A pero no de B
+oddDigits.subtracting(primeNumbers).sorted()
+
+//Union simetrica de A - B union (B - A)
+oddDigits.symmetricDifference(primeNumbers).sorted()
+
+let HouseAnimals : Set = ["Perro", "Gato"]
+let FarmAnimals : Set = ["Vaca", "Gallina", "Oveja", "Perro", "Gato"]
+let CityAnimals : Set = ["Ratas", "Palomas"]
+
+HouseAnimals.isSubset(of: FarmAnimals)
+FarmAnimals.isSuperset(of: HouseAnimals)
+//A y B son disjuntos si su intersección es vacia
+FarmAnimals.isDisjoint(with: CityAnimals)
+
+// Challenge
+let FavoriteFood : Set = ["Taco", "Asado", "Hamburguesa"]
+let Fruit : Set = ["Apple", "Oragen", "Banana"]
+FavoriteFood.isSubset(of: Fruit)
+Fruit.isDisjoint(with: FavoriteFood)
+Fruit.isSubset(of: FavoriteFood)
+
