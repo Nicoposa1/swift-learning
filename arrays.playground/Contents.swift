@@ -125,4 +125,18 @@ if let oldValue = airports.updateValue("Dublin Airport", forKey: "DUB"){
 airports["PMI"] = nil
 airports
 airports.removeValue(forKey: "YYZ")
- 
+
+for (key, value) in airports{
+    print("\(key) - \(value)")
+}
+
+for airportKey in airports.keys{
+    print(airportKey)
+}
+for airportValue in airports.values{
+    print(airportValue)
+}
+
+let airportKeys = [String](airports.keys)
+let airportValue = [String](airports.values)
+
