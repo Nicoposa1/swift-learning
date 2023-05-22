@@ -106,3 +106,23 @@ FavoriteFood.isSubset(of: Fruit)
 Fruit.isDisjoint(with: FavoriteFood)
 Fruit.isSubset(of: FavoriteFood)
 
+//Diccionarios [k1: v1, k2: v2, ...]
+var nameOfIntegers = [Int : String] ()
+nameOfIntegers[15] = "quice"
+nameOfIntegers = [:]
+
+var airports: [String : String] = ["YYZ" : "Toronto", "DUB" : "Dublin", "PMI": "Palma"]
+airports.count
+airports.isEmpty
+airports["LHR"] = "London City Airpots"
+airports
+airports["LHR"] = "London Hearhtow"
+
+if let oldValue = airports.updateValue("Dublin Airport", forKey: "DUB"){
+    print("El aeropurto cambio de nombre, antes era \(oldValue)")
+}
+
+airports["PMI"] = nil
+airports
+airports.removeValue(forKey: "YYZ")
+ 
