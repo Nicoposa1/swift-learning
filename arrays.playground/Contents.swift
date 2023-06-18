@@ -140,3 +140,35 @@ for airportValue in airports.values{
 let airportKeys = [String](airports.keys)
 let airportValue = [String](airports.values)
 
+
+// bucle while
+var i = 0
+while i <= 10 {
+    i += 1
+}
+print(1)
+
+
+print(i)
+            
+            
+let endNumber = 100
+var startNumber = 2
+var primeNumber: [Int] = []
+
+while startNumber <= 100 {
+    var isPrime = true
+    for idx in 2..<startNumber {
+        if startNumber % idx == 0 {
+            if idx != 1 && 1 != startNumber {
+                isPrime = false
+            }
+        }
+    }
+    if isPrime {
+        primeNumber.append(startNumber)
+    }
+    startNumber += 1
+}
+
+
