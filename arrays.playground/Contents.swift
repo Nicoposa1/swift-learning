@@ -171,4 +171,38 @@ while startNumber <= 100 {
     startNumber += 1
 }
 
+// if else
+
+var temp = 18
+if temp <= 15 {
+    print("Hace frio")
+} else if temp >= 25{
+    print("Hace calor! Enciende el aire acondicionado")
+} else {
+    print("El clima es agradable")
+}
+
+// switch
+
+let someCharacter: Character = "z"
+switch someCharacter.uppercased() {
+case "A":
+    print("Es la primera letra del abcedario")
+case "Z" :
+    print("Es la ultima letra del abecedario")
+default:
+    print("Es alguna letra del abecedario")
+}
+
+let theCharacter: Character = "r"
+switch theCharacter.uppercased() {
+case "A", "E", "I", "O", "U":
+    print("La letra \(theCharacter.uppercased()) es una vocal")
+
+default :
+    print("La letra \(theCharacter) no es una vocal")
+}
+
+
+
 
