@@ -203,6 +203,23 @@ default :
     print("La letra \(theCharacter) no es una vocal")
 }
 
+let moons = 62
+let prhase = "Lunas en Saturno"
+let naturalCount : String
+switch moons {
+case 0:
+    naturalCount = "No hay luna \(prhase)"
+case 1..<5:
+    naturalCount = "Hay algunas pocas \(prhase)"
+case 5..<12:
+    naturalCount = "Hay bastantes \(prhase)"
+case 12..<100:
+    naturalCount = "Hay muchas \(prhase)"
+default:
+    naturalCount = "Hay muchisimas \(prhase)"
+}
+
+
 
 
 
