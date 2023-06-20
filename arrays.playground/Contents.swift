@@ -219,6 +219,30 @@ default:
     naturalCount = "Hay muchisimas \(prhase)"
 }
 
+let somePoint = (1,1)
+switch somePoint {
+case (0,0):
+    print("El punto es el origen de coordenada")
+case (_, 0):
+    print("El punto \(somePoint) se halla sobre la coordenada x")
+case(0,_):
+    print("El punto \(somePoint) se halla sobre la coordenada y")
+case(-2...2, -2...2):
+    print("El punto \(somePoint) se halla sobre el interior del cuadrado 4")
+default:
+    print("El punto \(somePoint) no se halla aquí")
+}
+
+let anotherPoint = (2,0)
+switch anotherPoint {
+case (let x, 0):
+    print("Sobre el eje de X, con valor \(x)")
+case (0, let y):
+    print("Sobre el eje de Y, con valor \(y)")
+case let (x,y):
+    print("En algun otro lugar del plano \(x) \(y)")
+}
+
 
 
 
