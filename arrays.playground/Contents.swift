@@ -243,6 +243,14 @@ case let (x,y):
     print("En algun otro lugar del plano \(x) \(y)")
 }
 
+let stillAnotherPoint = (9,0)
+switch stillAnotherPoint {
+case(let distance, 0), (0, let distance) :
+    print("Se halla sobre el eje, a distancia \(distance) del origen")
+default:
+    print("No esta sobre el eje")
+}
+
 
 
 
