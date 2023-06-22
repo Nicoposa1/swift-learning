@@ -266,7 +266,19 @@ for character in sentence.lowercased() {
 }
 filteredSentence
 
+// fallthrough
+let integerToDescribe = 5
+var description = "El número \(integerToDescribe) es"
+switch integerToDescribe {
+case 2, 3, 5, 7, 11, 13, 17, 19:
+    description += " un número primo"
+    fallthrough
+default:
+    description += " un número entero"
+}
+description
 
+// return and guard
 
 
 
