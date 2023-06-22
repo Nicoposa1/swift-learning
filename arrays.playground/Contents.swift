@@ -251,6 +251,21 @@ default:
     print("No esta sobre el eje")
 }
 
+// control transfer sentences - continue, break, fallthrough, return, through
+let sentence = "Esta es una frase"
+var filteredSentence = ""
+let characterToRemove:[Character] = ["a", "e", "i", "o", "u"]
+for character in sentence.lowercased() {
+    if characterToRemove.contains(character) {
+        continue
+    }
+    if character == "f" {
+        break
+    }
+    filteredSentence.append(character)
+}
+filteredSentence
+
 
 
 
