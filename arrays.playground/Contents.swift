@@ -279,6 +279,27 @@ default:
 description
 
 // return and guard
+var people = ["Name": "Sol", "Age": 23, "Male": false] as [String: Any]
+func testUserValidation(person: [String: Any]){
+    guard let surname = person["Name"] else {
+        print("El nombre es desconocido")
+        return
+    }
+    print(surname)
+    guard let userAge = person["Age"] else {
+        print("La edad es desconocida")
+        return
+    }
+    print("La edad del usuario es \(userAge)")
+}
+testUserValidation(person: people)
+
+if #available(iOS 16, macOS 12, *) {
+    // ejecutar acciones de iOS 16 hacia adelante
+} else{
+    // ejecutar el código viejo para versiones anteriores 
+}
+
 
 
 
