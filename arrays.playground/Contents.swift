@@ -294,6 +294,9 @@ func testUserValidation(person: [String: Any]){
 }
 testUserValidation(person: people)
 
+
+// ejecutar codigo solo para ios 16
+
 if #available(iOS 16, macOS 12, *) {
     // ejecutar acciones de iOS 16 hacia adelante
 } else{
