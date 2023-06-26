@@ -58,3 +58,25 @@ func minMax (array:[Int]) -> (min: Int, max: Int)?{
 let bounds = minMax(array: [3, 5, -10, 12])
 print("Los valores se encuentra entre \(bounds!.min) y \(bounds!.max)")
  
+func someFunction(f1 firstParamName: Int, f2 secondParamName: Int = 5) {
+    //firstParamName variable de tipo Int
+    //secondParamName variable de tipo Int
+    print("\(firstParamName) and \(secondParamName)")
+}
+someFunction(f1: 2, f2: 3)
+someFunction(f1: 3)
+
+func greetings (_ person: String, from homeTown: String) -> String{
+    return("Un gusto \(person) que nos visites desde \(homeTown)")
+}
+greetings( "Nicolas", from: "Rio Gallegos")
+
+func mean(_ numbers: Double...) -> Double {
+    var total : Double = 0
+    for nuber in numbers {
+        total += nuber
+    }
+    return total / Double(numbers.count)
+}
+
+mean(1 , 6, 3, 7, 9, 8,4, 2)
