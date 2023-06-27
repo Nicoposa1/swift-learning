@@ -112,16 +112,18 @@ func printHW () {
 var mathFunction : (Int, Int) -> Int = addTwoInts
 mathFunction(2, 4)
 
-
-func stepForward(_ input: Int) -> Int {
-    return input + 1
-}
-
-func stepBackward(_ input: Int) -> Int {
-    return input - 1
-}
-
+ 
 func chooseStepFunction(backward: Bool) -> (Int) -> Int {
+    
+    func stepForward(_ input: Int) -> Int {
+        return input + 1
+    }
+
+    func stepBackward(_ input: Int) -> Int {
+        return input - 1
+    }
+
+    
     return backward ? stepBackward : stepForward
 }
 var value = -3
