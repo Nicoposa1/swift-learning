@@ -80,3 +80,56 @@ func mean(_ numbers: Double...) -> Double {
 }
 
 mean(1 , 6, 3, 7, 9, 8,4, 2)
+
+
+var x = 5
+func addOne(number: Int) {
+    var number2 = number
+    number2 += 1
+    print("Ahora el número vale \(number2)")
+}
+addOne(number: 11)
+
+func swipeTwoInt(_ a: inout Int, _ b: inout Int){
+    let tempA = a
+    a = b
+    b = tempA
+}
+var firstInt = 12
+var secondInt = 4
+print("firstInt: \(firstInt) and secondInt: \(secondInt)")
+swipeTwoInt(&firstInt, &secondInt)
+print("firstInt: \(firstInt) and secondInt: \(secondInt)")
+
+func addTwoInts(_ a: Int, _ b: Int) -> Int {
+    return a+b
+} // (Int, Int) -> Int
+
+func printHW () {
+    print("Hello World")
+} // () -> Void
+
+var mathFunction : (Int, Int) -> Int = addTwoInts
+mathFunction(2, 4)
+
+
+func stepForward(_ input: Int) -> Int {
+    return input + 1
+}
+
+func stepBackward(_ input: Int) -> Int {
+    return input - 1
+}
+
+func chooseStepFunction(backward: Bool) -> (Int) -> Int {
+    return backward ? stepBackward : stepForward
+}
+var value = -3
+let moveNearToZeto = chooseStepFunction(backward: value > 0)
+
+while value != 0 {
+    print("\(value)!!!")
+    value = moveNearToZeto(value)
+}
+ 
+
