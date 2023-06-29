@@ -55,3 +55,37 @@ func makeIncrementer (forIncrement amount : Int) -> () -> Int {
 let incrementeByTen = makeIncrementer(forIncrement: 10)
 incrementeByTen()
 incrementeByTen()
+
+
+var completionHandlers: [() -> Void] = []
+
+func someFunctionWithScapingClosure (completionHandler: @escaping() -> Void) {
+    completionHandlers.append(completionHandler)
+}
+
+completionHandlers.count
+
+func someFunctionWithNoneScapingClosure (closure: () -> Void){
+    closure()
+}
+
+class SomeClass {
+    var x = 10
+    func doSomething() {
+        someFunctionWithScapingClosure {
+            self.x = 100
+        }
+        someFunctionWithNoneScapingClosure {
+            x = 200
+        }
+    }
+}
+
+let instance = SomeClass()
+print(instance.x)
+instance.doSomething()
+print(instance.x)
+completionHandlers.count
+completionHandlers.first?()
+print(instance.x)
+
