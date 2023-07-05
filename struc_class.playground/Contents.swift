@@ -28,3 +28,4 @@ let someVideoMode = VideoMode()
 print(someResolution.width)
 someVideoMode.resolution.width = 1280
 print(someVideoMode.resolution.width)
+print(someVideoMode.resolution.height)
