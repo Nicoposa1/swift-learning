@@ -1,5 +1,3 @@
-import UIKit
-
 //Struc vs Class
 
 struct SomeStruct {
@@ -29,3 +27,27 @@ print(someResolution.width)
 someVideoMode.resolution.width = 1280
 print(someVideoMode.resolution.width)
 print(someVideoMode.resolution.height)
+
+let vga = Resolution.init(width: 640, height: 480)
+
+print(vga.height)
+
+let hd = Resolution.init(width: 1920, height: 1080)
+
+print(hd)
+
+
+var cinema = hd
+print("\(cinema.width) x \(cinema.height)")
+cinema.width = 2048
+print("\(cinema.width) x \(cinema.height)")
+
+enum CompassPoint {
+    case north, south, east, west
+}
+
+var currentDirection = CompassPoint.west
+
+let rememberedDirection = currentDirection
+currentDirection = .east
+
