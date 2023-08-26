@@ -51,3 +51,19 @@ var currentDirection = CompassPoint.west
 let rememberedDirection = currentDirection
 currentDirection = .east
 
+let tenEighty = VideoMode()
+tenEighty.resolution = hd
+tenEighty.interlaced = true
+tenEighty.name = "1080i"
+tenEighty.frameRate = 25.0
+
+let alsotenEighty = tenEighty
+alsotenEighty.frameRate = 30
+
+tenEighty
+
+if tenEighty === alsotenEighty {
+    print("Son el mismo objeto")
+} else {
+    print("Son diferente")
+}
