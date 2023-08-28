@@ -57,4 +57,4 @@ var square = Rectangle(origin: Point(x: 0, y: 0), size: Size(height: 10, width: 
 square.center
 
 let initialSquareCenter = square.center
-square.center = Point(x: 20, y: 10)
+square.center = Point(x: 20, y: 20)
