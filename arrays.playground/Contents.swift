@@ -19,7 +19,7 @@ var moreDobles = Array(repeating: 2.5, count: 4)
 
 var alotDobles = someDobles + moreDobles
 alotDobles.count
- 
+
 var shoppingList : [String] = ["papa", "pimientos", "tortillas", "queso"]
 shoppingList.count
 
