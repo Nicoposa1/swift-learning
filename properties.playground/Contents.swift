@@ -48,7 +48,6 @@ struct Rectangle {
         set(newCenter){
             origin.x = newCenter.x - size.width/2
             origin.y = newCenter.y - size.height/2
-           
         }
     }
 }
@@ -70,4 +69,23 @@ struct Cuboid{
 
 var cuboid = Cuboid(width: 4.0, height: 5.0, depth: 2.0)
 cuboid.volume
+
+
+class StepCounter {
+    var totalSteps: Int = 0{
+        willSet(newTotalSteps){
+            print("El número de pasos va a subir hasta \(newTotalSteps)")
+        }
+        didSet{
+            if totalSteps > oldValue{
+                print("El número de pasos ha incrementado en \(totalSteps - oldValue)")
+            }
+        }
+    }
+}
+
+let stepCounter = StepCounter()
+
+stepCounter.totalSteps = 200
+
 
