@@ -74,7 +74,7 @@ cuboid.volume
 class StepCounter {
     var totalSteps: Int = 0{
         willSet(newTotalSteps){
-            print("El número de pasos va a subir hasta \(newTotalSteps)")
+            print("El número de pasos va a subir hasta el \(newTotalSteps)")
         }
         didSet{
             if totalSteps > oldValue{
