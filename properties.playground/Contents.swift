@@ -88,4 +88,20 @@ let stepCounter = StepCounter()
 
 stepCounter.totalSteps = 200
 
+struct someStruct {
+    static var storedTypeProperty = "SOME VALUE"
+    static var computedTypeProperty: Int {
+        return 1
+    }
+}
 
+var instanceStr = someStruct()
+someStruct.computedTypeProperty
+
+enum SomeEnum  {
+    static var storedTypeProperty = "SomeValue"
+    static var computedTypeProperty: Int {
+        return 5
+    }
+}
+SomeEnum.computedTypeProperty
