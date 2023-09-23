@@ -35,7 +35,7 @@ struct Point {
 
 var somePoint = Point(x: 4, y: 3)
 somePoint.isToTheRigth(of: 3)
-somePoint.moveBy(x: 3, y: -3)
+somePoint.moveBy(x: 2, y: -3)
 
 enum SwithCase {
     case off, low, high
