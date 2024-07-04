@@ -105,3 +105,4 @@ enum SomeEnum  {
     }
 }
 SomeEnum.computedTypeProperty
+SomeEnum.storedTypeProperty
