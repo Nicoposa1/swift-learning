@@ -106,3 +106,4 @@ enum SomeEnum  {
 }
 SomeEnum.computedTypeProperty
 SomeEnum.storedTypeProperty
+SomeEnum.storedTypeProperty = "SomeOtherValue"
