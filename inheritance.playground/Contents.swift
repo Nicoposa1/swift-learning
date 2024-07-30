@@ -18,4 +18,14 @@ class Bicycle: Vehicle {
 }
 
 let bicycle = Bicycle()
-bicycle.hasBasket 
+bicycle.hasBasket
+
+class Train: Vehicle{
+    var numberOfWagons = 0
+    override func makeNoise() {
+        print("Choo Choo")
+    }
+}
+
+let train = Train()
+train.makeNoise()
