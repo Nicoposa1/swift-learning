@@ -64,4 +64,25 @@ let q1 = SurveyQuestion(text: "Te gustan los taco?")
 q1.ask()
 q1.response = "Si, me gustan"
 
+class Vehicle {
+    var numberOfWheels = 0
+    var description:String {
+        return "Number of wheels is \(numberOfWheels)"
+    }
+}
+
+var vehicle = Vehicle()
+vehicle.numberOfWheels = 2
+vehicle.description
+
+class Car:Vehicle{
+    override init() {
+        super.init()
+        numberOfWheels = 4
+    }
+}
+
+let car = Car()
+car.description
+
 
