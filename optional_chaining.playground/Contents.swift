@@ -30,7 +30,7 @@ class Person {
 
 class Residence {
     var rooms = [Room]()
-    var numberOfRomms: Int {
+    var numberOfRooms: Int {
         return rooms.count
     }
     subscript(i:Int) -> Room {
@@ -40,6 +40,11 @@ class Residence {
         set {
             rooms[i] = newValue
         }
+    }
+    var address: Address?
+    
+    func printNumberOfRooms(){
+        print(numberOfRooms)
     }
 }
 
@@ -66,6 +71,56 @@ class Address {
     }
 }
 
+let Edgar = Person()
 
 
+if let roomCount = Edgar.residence?.numberOfRooms {
+    print("La casa de Edgar tiene \(roomCount) habitaciones")
+} else {
+    print("Edgar no tiene casa")
+}
 
+
+func createAdress() -> Address {
+    print("La función siendo llamada")
+    let someAddress = Address()
+    someAddress.buildingNumber = "338"
+    someAddress.street = "Julian Alvares"
+    return someAddress
+}
+
+Edgar.residence?.address = createAdress()
+Edgar
+
+Edgar.residence?.printNumberOfRooms()
+
+if Edgar.residence?.printNumberOfRooms() != nil {
+    print("He podido obetener el número de habitacione")
+} else {
+    print("No ha sido posible saber el número de habitaciones")
+}
+
+if (Edgar.residence?.address = createAdress()) != nil {
+    print("Ha sido posible configurar la dirección de Edgar")
+} else {
+    print("Seguimos sin saber donde vive Edgar")
+}
+
+if let firstRoomName = Edgar.residence?[0].name {
+    print("La primera habitación es de \(firstRoomName)")
+} else {
+    print("La primera habitación no sabemos de quien es")
+}
+
+Edgar.residence?[0] = Room(name: "Bathroom")
+
+let EdgarHouse = Residence()
+EdgarHouse.rooms.append(Room(name: "Bathroom"))
+EdgarHouse.rooms.append(Room(name: "LivingRoom"))
+EdgarHouse.rooms.append(Room(name: "Kitchen"))
+Edgar.residence = EdgarHouse
+if let firstRoomName = Edgar.residence?[0].name {
+    print("La primera habitación es el \(firstRoomName)")
+} else {
+    print("La primera habitación no sabemos de quien es")
+}
